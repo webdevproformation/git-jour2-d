@@ -13,3 +13,40 @@ sur la même ligne du même fichier => A et B => fusionner les branchs git merge
 
 => git => conflit => fusionner deux branch mais dans le fichier à la même deux informations différentes => choix à faire => ??? quel est le bon choix 
 
+
+
+         O-------------|   conflit  index.html => <title> home</title> 
+         |             |             |            
+         |             |             |
+O ------ O ------ O ---x  master  index.html => <title> accueil</title>    
+
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+1er il faut aller dans le ou les fichiers où il ya des conflits et choisir soit même 
+=> branch master 
+=> branch que l'on veut fusionner ici conflit 
+=> garder le contenu des deux branchs 
+
+=> régler le conflit 
+
+git add *
+git commit -m "conflit résolu"
+
+supprimer la branch dans laquelle on a le conflit 
+git branch -d conflit 
+
+// cas pratique : 
+créer une branch mis-en-page et se positionner dessus 
+modifier le contenu de la class de labalise  container => wrap 
+valider via un commit
+
+repositionner sur la branch master 
+modifier le contenu de la class de labalise  container => wrapper 
+valider via un commit
+
+essayer de fusionner les deux branches master et mis-en-page
+résoudre le conflit en ligne de commande 
+
+supprimer la branch mis-en-page

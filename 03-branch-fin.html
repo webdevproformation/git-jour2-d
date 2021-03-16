@@ -1,0 +1,42 @@
+
+soit vous fusionnez la branch créée avec la branch master 
+
+git merge f1 
+git branch -d f1 
+
+vous avez créé une branch => voie sans issue => ça ne sert à rien 
+
+revenir sur la branch master et ne pas la fusionner avec master 
+
+git checkout master 
+supprimer la branch f1 sans la fusionner 
+git branch -d f1 => NON 
+git branch -D f1 => supprimer la branch même si elle n'a pas été fusionnée avec master 
+
+-------------
+
+git checkout f1 
+git branch -d f1 => Erreur 
+git branch -D f1 => Erreur
+il n'est pas possible de supprimer une branch tant que l'on est dessus
+
+il faut au préalable se positionner sur une autre branch pour la supprimer 
+git checkout master 
+git branch -d f1 => Erreur 
+git branch -D f1 => Erreur
+
+.gitignore 
+c'est un fichier de configuration de git 
+ce fichier va donner des instrustions sur les dossiers / fichiers à ne pas versionner 
+
+dans le dossier jour2 => créer un sous dossier documentation 
+créer 2 fichiers mot-passe.txt / identifiant.txt  
+
+le contenu des deux fichiers sont sensibles => vous ne voulez pas que git en fasse une copie 
+contenu du fichier .gitignore
+
+documentation/
+
+
+
+

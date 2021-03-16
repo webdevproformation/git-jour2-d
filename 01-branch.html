@@ -4,7 +4,7 @@ O   ---- O  ------- O
 
 on va créer une nouvelle branch dans notre projet  => créer une projet parallèle projet en cours
                   O ----- O ------  => branch parallèle à la branch master 
-                  |                    une nouvelle fonctionnalité                      
+                  |                    une nouvelle fonction 1                       
                   |
 O ------ O ------ O => branch master 
 
@@ -21,4 +21,32 @@ Switched to branch 'fonction1'
 
 effectuer des modifications dans notre projet 
 
-modifier le fichier index.html 
+modifier le fichier index.html et script 
+
+git add *
+git commit -m "ajout fonction sur les miniatures"
+
+je viens de créer un commit sur la branch fonction1 
+=> le développement que l'on vient de réaliser est positionné sur la branch fonction1 
+si jamais je me positionne dans la branch master => tous les commits réalisés dans la branch fonction1 vont disparaitre 
+
+git checkout master
+
+git add *
+git commit -m "validation finale "
+
+git checkout master
+
+git stash
+
+stash (caché => planquer )
+
+le fait de pouvoir créer une branch et de faire des commit dessus => 
+il devient très facile de revenir en arrière en cas problème !
+
+git checkout fonction1 
+
+git stash list  0 1 2 
+
+git stash pop 0
+

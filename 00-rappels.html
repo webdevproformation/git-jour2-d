@@ -1,0 +1,94 @@
+support de cours :
+
+adresse : https://formation.webdevpro.net/git/
+
+login : github
+mdp : github
+
+
+--------------------------- 
+
+git est outil qui permet de réaliser versionning
+
+garder dans un dossier caché (repository) plusieurs versions d'un projet
+
+chaque version nommée commit => chaque commit a un identifiant 
+
+git init 
+
+git add => valider les fichiers à commiter
+git commit => le fait de stocker une version dans repository 
+
+git add <file-name> <file-name>
+git add dossier/file-name 
+git add *
+git add dossier/*
+git add **/*.js
+
+git commit => vim 
+git commit -m "un commentaire "
+
+visualiser les commits 
+gitk 
+git log --oneline => version compact de gitk id - commentaire 
+git diff index.html => comparaison entre repo et le fichier index.html qui n'a pas été encore été commité 
+
+git status = etat de synchronicité entre le repo et dossier de travail 
+
+touch file => créer un fichier 
+mkdir créer un dossier 
+cd déplacer dans l'arborescence
+clear nettoyer le terminal 
+
+--------
+
+modifier / supprimer / déplacer des fichiers  
+
+git rm file ... git commit 
+git mv file dossier/file  => déplacer et ... git commit 
+git mv file file2    => renommer un fichier et ... git commit 
+
+--------- 
+
+il est possible de voir le passé (se remettre dans la position passée)
+git log --oneline 
+git checkout <id-commit> 
+
+juste voir / pas possible de modifier et de faire un commit 
+
+revenir maintenant (dans le présent/ dernier commit )
+
+git checkout master 
+
+supprimer tous les commits jusqu'à un précédent commit 
+
+git reset <id-commit> --hard 
+
+attention cette commande est une commande destructive => il n'est plus possible de récupérer les commits supprimés 
+
+---------------
+
+se repositionner dans le passé sans le détruire = on le copie !!! 
+
+copier un ancien commit et le mettre comme situation actuelle
+
+git revert <id-commit>
+
+--------- 
+
+cas pratique : 
+les commande git config elles ne doivent être saisit 1 seule fois par ordinateur (au moment de l'installation)
+cd jour2 
+git init 
+1 dans le dossier jour2 vous allez initiation un nouveau repository 
+
+2 vous allez créer 3 fichiers dans le dossier jour2 
+index.html / style.css / script.js 
+touch index.html style.css script.js
+
+3 créer une structure de page de base dans la page html 
+télécharger bootstrap et css et le js 
+barre de menu avec 3 items dedans Accueil / Commande  / Contact 
+
+4 tout enregistrer (les 3 fichiers ) dans un repo local 
+

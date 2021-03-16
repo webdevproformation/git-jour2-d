@@ -62,5 +62,91 @@ O ------ O ------ O ------------------------ O    branch master
 
 git checkout master
 
+git merge fonction1 
+
+
+=> coder un logiciel => branch master 
+
+développeur => coder une nouvelle fonctionnalité sur ce logiciel 
+
+copie du logiciel (branch) => faire tes modifications => vérifier que tout fonctionne 
+et une fois que ta fonctionnalité est opérationnelle => fusionner dans la branch master du logiciel 
+
+start up dans le monde informatique 
+
+idée => logiciel => mettent en ligne 
+
+ajouter une nouvelle fonction => créer une branch => fusionne sur le logiciel 
+
+permet d'avoir 5  6 développeurs qui codent simultanément des fonctions du logiciel en parallèle 
+
+par défaut répository en local => git init => master 
+
+github => pull request => demande pour être fusionné 
+
+git merge 
+
+// café rdv 10h56 bon  café @ toute suite !! 
+
+j'ai une nouvelle fonction à coder ET je ne veux pas casser le logiciel que je suis en train de coder 
+c'est la première fois que je vais coder cette fonctionnalité => grosse chance que je casse mon logiciel 
+
+créer une branch avec le nom de la fonctionnalité === créer un projet parallèle 
+dans lequel je vais réaliser ma fonctionnalité et je vais faire des commit (DANS la branch)
+et une fois que c'est opérationnel 
+fusionner la branch de la fonction avec la branch master 
+
+1 vérifier que tout est enregistré dans la branch master 
+git status 
+
+solution 1
+git add *
+git commit -m "prêt pour la branch"
+
+solution 2
+git stash => prendre toutes les modifications sur les fichiers untracked / modified / unstaged 
+          => planquer 
+
+créer la branch 
+git branch nom-fonction 
+
+positionner sur la branch 
+git checkout nom-fonction  
+
+=> réaliser tous les codages nécessaires pour faire la fonction => git add / git commit 
+
+=> votre fonctionnalité est prête / stable  => fusionner vos développements dans la branch master 
+
+repositionner sur la branch master
+git checkout master 
+
+Et fusionne la branch 
+git merge nom-fonction
+
+il faut supprimer le nom de la branch 
+git branch -d nom-fonction 
+supprimer la branch et remettre à disposition de la nom-fonction 
+
+il est impossible de supprimer la branch master 
+
+cas pratique :
+1 créer une nouvelle branch diaporama et se positionner dessus 
+git status
+git add 01-branch.html
+git commit -m "validation avant branch"
+
+2 ajouter un diaporama bootstrap dans la page index.html juste après le menu  
+aide https://getbootstrap.com/docs/5.0/components/carousel/ 
+3 une fois que cette fonctionnalité est opérationnelle 
+4 fusionner la branch master avec la branch diaporama
+5 supprimer la branch diaporama
+
+
+
+
+
+
+
+
 
 
